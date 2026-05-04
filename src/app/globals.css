@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  @apply bg-[var(--background)] text-slate-900 dark:text-slate-100 transition-colors duration-500 antialiased overflow-x-hidden;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    --background: #fdfdfd;
+    --foreground: #0f172a;
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-bg: rgba(255, 255, 255, 0.6);
+  }
+
+  .dark {
+    --background: #020817; 
+    --foreground: #f1f5f9;
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(15, 23, 42, 0.5);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  /* FAANG Level Glassmorphism */
+  .glass-panel {
+    @apply relative overflow-hidden rounded-[2rem] border bg-[var(--glass-bg)] border-[var(--glass-border)] shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-2xl transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] dark:hover:shadow-[0_8px_30px_rgb(0,0,0,0.4)];
+  }
+
+  /* Slick inner highlight for glass panels mimicking high-end UI */
+  .glass-panel::before {
+    content: "";
+    @apply absolute inset-0 rounded-[2rem] pointer-events-none border border-white/40 dark:border-white/10 mix-blend-overlay;
+  }
+
+  .fade-in-up {
+    animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  
+  .delay-75 {
+    animation-delay: 75ms;
+  }
+  
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+
+  /* Fancy Mesh Gradients for App Background */
+  .bg-mesh-light {
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(213,100%,92%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(213,100%,94%,1) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(213,100%,92%,1) 0, transparent 50%);
+  }
+  
+  .bg-mesh-dark {
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(220,100%,10%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(220,80%,15%,1) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(220,100%,10%,1) 0, transparent 50%);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 24px rgba(242, 169, 0, 0.4);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.video-container video,
+.video-container [class*="video"],
+.video-container [class*="Video"] {
+  border-radius: 1.5rem !important;
+}
+
+.video-container video {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 14px 34px rgba(0, 20, 40, 0.22);
+}
+
+.video-container [class*="speaking"],
+.video-container [class*="Speaking"],
+.video-container [class*="activeSpeaker"],
+.video-container [class*="ActiveSpeaker"] {
+  box-shadow: 0 0 0 3px rgba(242, 169, 0, 0.9), 0 0 40px rgba(242, 169, 0, 0.4) !important;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+  }
+  30% {
+    transform: translate(calc(-50% + var(--drift, 0px)), -22vh) scale(1.05);
+    opacity: 0.95;
+  }
+  65% {
+    transform: translate(calc(-50% - var(--drift, 0px)), -45vh) scale(1.02);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(calc(-50% + (var(--drift, 0px) * 0.5)), -62vh) scale(0.95);
+    opacity: 0;
+  }
+}
+
+.animate-float-up {
+  animation: float-up 3s ease-out forwards;
+}
