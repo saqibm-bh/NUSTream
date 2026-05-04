@@ -15,7 +15,8 @@
 
 </div>
 
-![NUSTream Hero Screenshot](link)
+<img width="1852" height="873" alt="image" src="https://github.com/user-attachments/assets/515d4a5a-ab33-4278-a9b4-7eb9633f5e99" />
+
 
 NUSTream is a full-stack video conferencing and academic meeting platform built for the NUST community. It combines institutional Google authentication, real-time video sessions, a pre-join device lobby, attendance export, reactions, and a collaborative whiteboard inside a clean, production-minded Next.js application.
 
@@ -34,24 +35,18 @@ This project shows product thinking, frontend discipline, and systems awareness 
 Use these exact screenshot slots to make the repository scan well for recruiters:
 
 **Landing / Sign-In**
-![Landing Screenshot](link)  
-Recommended image: the branded NUSTream landing page with the Google sign-in panel visible.
+<img width="1850" height="874" alt="image" src="https://github.com/user-attachments/assets/2cff8ab4-3a24-4675-bf06-ad8e192a20d1" />
 
 **Dashboard View**
-![Dashboard Screenshot](link)  
-Recommended image: authenticated dashboard showing the welcome hero, meeting actions, and the agenda panel.
-
-**Meeting Lobby**
-![Meeting Lobby Screenshot](link)  
-Recommended image: pre-join screen with camera preview, mic/camera toggles, and the room entry CTA.
+<img width="1831" height="809" alt="image" src="https://github.com/user-attachments/assets/634a2496-297b-45e8-89dd-eb21799f9fe0" />
 
 **Active Video Call**
-![Active Meeting Screenshot](link)  
-Recommended image: live meeting screen with the ZEGOCLOUD canvas, attendance button, whiteboard button, reactions button, and network badge.
+<img width="1836" height="864" alt="image" src="https://github.com/user-attachments/assets/1032f560-67a2-4aa6-90a6-6e6842077298" />
+
 
 **Whiteboard**
-![Whiteboard Screenshot](link)  
-Recommended image: Excalidraw whiteboard open during a session.
+<img width="1829" height="856" alt="image" src="https://github.com/user-attachments/assets/66df6f96-8e32-40fd-8f5d-815e9b547771" />
+
 
 ## Core Features
 
@@ -253,6 +248,4 @@ Built by: `Saqib Mahmood`
 University / Semester: `CS 6th Semester - SEECS - NUST - Islamabad, Pakistan`  
 LinkedIn: `https://www.linkedin.com/in/saqib-mahmood-b604651a9/`
 
-## License
 
-Add your preferred license here.
